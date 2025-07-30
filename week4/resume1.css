@@ -1,0 +1,173 @@
+/* style_resume.css */
+
+/* Basic body styling for overall font and layout */
+body {
+    font-family: 'Inter', sans-serif; /* Using Inter font for a modern look */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark grey text color */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: flex-start; /* Align content to the top */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+/* Main container for the resume content */
+div {
+    background-color: #fff; /* White background for the resume */
+    max-width: 900px; /* Maximum width for readability */
+    width: 100%; /* Ensure it takes full width up to max-width */
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+/* Styling for the name at the top */
+.name {
+    text-align: center;
+    color: #2c3e50; /* Dark blue-grey for the name */
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Larger font size for prominence */
+    font-weight: 700; /* Bold font weight */
+    text-transform: uppercase; /* Uppercase for a strong look */
+}
+
+/* Styling for section headings */
+h1 {
+    color: #34495e; /* Slightly lighter blue-grey for section titles */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #ddd; /* Underline for section titles */
+    padding-bottom: 5px;
+}
+
+/* Horizontal rule styling */
+hr {
+    border: none;
+    border-top: 1px solid #eee; /* Light grey thin line */
+    margin-bottom: 20px;
+}
+
+/* General table styling */
+table {
+    width: 100%; /* Make tables take full width of their container */
+    border-collapse: collapse; /* Collapse borders for cleaner look */
+    margin-bottom: 20px;
+}
+
+/* Table cell styling */
+td {
+    padding: 8px 0; /* Vertical padding for table cells */
+    vertical-align: top; /* Align text to the top of the cell */
+}
+
+/* Specific styling for the contact information table */
+table[width="600px"] td {
+    text-align: center;
+    padding: 5px;
+    font-size: 0.95em;
+}
+
+/* Links within the contact table */
+table[width="600px"] a {
+    color: #3498db; /* Blue color for links */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+table[width="600px"] a:hover {
+    color: #2980b9; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Styling for the education table */
+table[width="850px"] td:first-child {
+    font-weight: bold; /* Make the degree/school name bold */
+}
+
+/* Right alignment for dates in education table */
+table[width="850px"] td[style="text-align:right"] {
+    white-space: nowrap; /* Prevent dates from wrapping */
+}
+
+/* Styling for the skills summary table */
+table[width="1600px"] td:first-child {
+    font-weight: bold; /* Make skill categories bold */
+    width: 150px; /* Fixed width for categories */
+}
+
+/* Styling for the certifications table */
+table[width="900px"] td:first-child {
+    font-weight: bold; /* Make certification names bold */
+    width: 250px; /* Fixed width for certification names */
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    font-size: 1.05em;
+}
+
+/* Bold text within paragraphs */
+p b {
+    color: #34495e; /* Match section title color for bold text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    div {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .name {
+        font-size: 2em; /* Adjust name font size */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust heading font size */
+    }
+
+    table, table[width="600px"], table[width="850px"], table[width="1600px"], table[width="900px"] {
+        display: block; /* Make tables stack on small screens */
+        width: 100%;
+    }
+
+    table tr {
+        display: flex;
+        flex-wrap: wrap; /* Allow table rows to wrap */
+        justify-content: space-between; /* Space out items */
+        margin-bottom: 10px;
+        border-bottom: 1px dashed #eee; /* Add a subtle separator between rows */
+        padding-bottom: 5px;
+    }
+
+    table tr:last-child {
+        border-bottom: none; /* No border for the last row */
+    }
+
+    table td {
+        width: auto; /* Allow cells to take natural width */
+        text-align: left !important; /* Override center/right alignment for better mobile readability */
+        padding: 5px 0;
+    } 
+
+    /* Adjust specific table cell widths for better mobile layout */
+    table[width="850px"] td:first-child,
+    table[width="1600px"] td:first-child,
+    table[width="900px"] td:first-child {
+        width: 100%; /* Make first column take full width */
+        margin-bottom: 5px; /* Add spacing below the bolded item */
+    }
+
+    table[width="850px"] td[style="text-align:right"] {
+        width: 100%; /* Make date take full width */
+        text-align: left !important; /* Ensure left alignment */
+        font-size: 0.9em; /* Slightly smaller font for dates on mobile */
+        color: #666; /* Muted color for dates */
+    }
+}
